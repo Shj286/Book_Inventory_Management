@@ -86,13 +86,12 @@ The server will start, and you should see output indicating that Flask is runnin
 Step 2: Open the Application in a Web Browser
 Open your browser and go to http://127.0.0.1:5000 to see the application interface.
 
+
 Usage
 
 Add Book: Enter book details in the "Add Book" form and click "Add Book" to save it in the inventory.
 Filter Books: Use the filter form to search for books by title, author, or genre.
 Export CSV: Click "Export as CSV" to download the book inventory as a CSV file.
-Screenshots (optional)
-Include screenshots of the application UI, if desired, to make the README more visual.
 
 Design Decisions
 
