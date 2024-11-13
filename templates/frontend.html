@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Inventory</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Book Inventory</h1>
+
+        <!-- Add Book Form -->
+        <form action="/add" method="POST">
+            <input type="text" name="title" placeholder="Title" required>
+            <input type="text" name="author" placeholder="Author" required>
+            <input type="text" name="genre" placeholder="Genre" required>
+            <input type="date" name="publication_date">
+            <input type="text" name="isbn" placeholder="ISBN" required>
+            <button type="submit">Add Book</button>
+        </form>
+
+        <!-- Filter Form -->
+        <form action="/filter" method="GET">
+            <input type="text" name="title" placeholder="Filter by Title">
+            <input type="text" name="author" placeholder="Filter by Author">
+            <input type="text" name="genre" placeholder="Filter by Genre">
+            <button type="submit">Filter</button>
+        </form>
+
+        <!-- Export Button -->
+        <a href="/export?format=csv" class="export-btn">Export as CSV</a>
+
+        <!-- Display Books -->
+        <table>
+            <tr>
+                <th>Entry ID</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Genre</th>
+                <th>Publication Date</th>
+                <th>ISBN</th>
+            </tr>
+            {% for book in books %}
+            <tr>
+                <td>{{ book.entry_id }}</td>
+                <td>{{ book.title }}</td>
+                <td>{{ book.author }}</td>
+                <td>{{ book.genre }}</td>
+                <td>{{ book.publication_date }}</td>
+                <td>{{ book.isbn }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+/* Reset some default styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* General Page Styling */
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+}
+
+/* Container for center alignment */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Header Styling */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #3b5998;
+}
+
+/* Form Styling */
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+form input, form button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #3b5998;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #314a7b;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background-color: #3b5998;
+    color: #fff;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Export Button Styling */
+.export-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3b5998;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.export-btn:hover {
+    background-color: #314a7b;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    form input, form button {
+        width: 100%;
+    }
+    
+    table, th, td {
+        font-size: 14px;
+    }
+}
